@@ -1,12 +1,7 @@
 #Team Name: KMP
 
-#Members in Team
-	#Patrick McCardle
-	#Matendo Rugema
-	#Kyle Sheeley
+#Members in Team: Patrick McCardle, Matendo Rugema, and Kyle Sheeley
 
-#Goal
-	#Unknown
+#Goal: Unknown
 
-#Timeline
-	#Unknown
+#Timeline: Unknown
