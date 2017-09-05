@@ -2,7 +2,7 @@
 
 
 
-cat > pats_html.html <<EOF
+cat > KMPs_html.html <<EOF
 
 <!DOCTYPE html>
 
@@ -84,7 +84,6 @@ cat > pats_html.html <<EOF
 
 
 
-    <!-- Fixed (stays at the top of the browser when you scroll) navbar -->
 
     <div class="container theme-showcase" role="main">
 
@@ -150,7 +149,7 @@ html_snippet="
 
 
 
-  echo $html_snippet  >> pats_html.html
+  echo $html_snippet  >> KMPs_html.html
 
 done
 
@@ -158,7 +157,7 @@ done
 
 
 
-cat >> pats_html.html <<EOF
+cat >> KMPs_html.html <<EOF
 
             </tbody>
 
