@@ -169,11 +169,6 @@ cat >> KMPs_html.html <<EOF
 
 
 
-      <div class="well">
-
-        <p>This thing's called a well.</p>
-
-      </div>
 
 
 
