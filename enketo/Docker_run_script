@@ -1,0 +1,19 @@
+#!/bin/sh
+
+echo "
+# This script starts up the docker-compose development environment defined at [docker-compose.yml](docker-compose.yml).
+# After the environment starts, the script will list the running docker projects and then open a bash session with the enketo docker container.
+#
+# Running \"docker logs -f enketo\" will let you tail the logs and be sure things are finished setting up before running tests.
+# When you're ready to run tests, you can run the \"./run_tests.sh\" script from your host machine.
+"
+
+set -x
+
+sudo docker-compose up -d
+
+sudo docker ps -a
+
+sudo docker exec -it enketo bash
+
+set +x
