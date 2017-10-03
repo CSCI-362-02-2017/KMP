@@ -1,0 +1,21 @@
+#!/bin/bash
+
+#install nvm 
+echo '** At the end of the installation you must open a new terminal to use "npm" or "node" **'
+
+export NODE_VERSION="6.11"
+
+export NVM_DIR="$HOME/.nvm"
+
+curl -Lo /tmp/install_nvm https://raw.githubusercontent.com/creationix/nvm/v0.33.4/install.sh
+
+chmod +x /tmp/install_nvm
+
+/tmp/install_nvm
+
+rm /tmp/install_nvm
+
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+nvm install "$NODE_VERSION"

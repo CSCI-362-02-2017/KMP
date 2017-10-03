@@ -1,0 +1,36 @@
+#!/bin/bash
+
+# wtf this is 
+# this is a script to download & install Atom on Ubuntu 16.04 (Xenial)
+
+# e => exit script if any command fails
+# x => print every command before execution
+set -ex
+
+# Atom runtime dependency, (and duh)
+if [ -z "$(which git)" ]
+then 
+  sudo apt-get update
+  sudo apt-get -y install \
+             git \
+             git-man \
+             liberror-perl
+fi
+
+# installing curl if not already installed
+if [ -z "$(which curl)" ]
+then
+  sudo apt-get update
+  sudo apt-get -y install curl
+fi
+
+curl -Lo "$HOME/atom.deb" https://github.com/atom/atom/releases/download/v1.20.1/atom-amd64.deb
+
+sudo dpkg -i "$HOME/atom.deb"
+
+echo "Atom installed at : $(which atom)"
+
+
+
+
+ 
