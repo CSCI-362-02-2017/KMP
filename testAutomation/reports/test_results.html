@@ -1,0 +1,35 @@
+Running "env:test" (env) task
+
+Running "mochaTest:kmp_id" (mochaTest) task
+
+
+  Survey Model
+    isNew() check
+      ✓ Test: 001 is rejected if id is undefined
+      ✓ Test: 002 is rejected if id is null
+      ✓ Test: 003 is rejected if id is false
+      ✓ Test: 004 is rejected if id is negative
+      ✓ Test: 005 is rejected if id is 0
+
+
+  5 passing (38ms)
+
+
+Running "karma:headless" (karma) task
+[32m14 11 2017 01:46:01.193:INFO [framework.browserify]: [39mbundle built
+[32m14 11 2017 01:46:01.228:INFO [karma]: [39mKarma v1.7.1 server started at http://0.0.0.0:9876/
+[32m14 11 2017 01:46:01.229:INFO [launcher]: [39mLaunching browser ChromeHeadless with unlimited concurrency
+[32m14 11 2017 01:46:01.235:INFO [launcher]: [39mStarting browser ChromeHeadless
+[31m14 11 2017 01:46:01.236:ERROR [launcher]: [39mNo binary for ChromeHeadless browser on your platform.
+  Please, set "CHROME_BIN" env variable.
+Warning: Task "karma:headless" failed. Use --force to continue.
+
+Aborted due to warnings.
+
+
+Execution Time (2017-11-14 01:45:43 UTC-0)
+loading tasks     12.3s  ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 68%
+mochaTest:kmp_id  798ms  ▇▇ 4%
+karma:headless     4.9s  ▇▇▇▇▇▇▇▇▇▇▇▇ 27%
+Total 18s
+
