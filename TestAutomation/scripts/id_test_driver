@@ -5,7 +5,7 @@ GRUNT_COMMAND='test-and-build-kmp_id'
 
 TIME_EXECUTED="$(date +%s)"
 
-PATH_TO_KMP=$( cd .. ; cd .. ; pwd -P )
+PATH_TO_KMP=$( cd .. ; pwd -P )
 
 PATH_TO_ENKETO="$PATH_TO_KMP/testAutomation/project/enketo/enketo-express-2"
 
