@@ -1,0 +1,12 @@
+Test number : 8
+Requirement being tested : new server/client connection
+Component : new submission
+Method : isNew() check
+Inputs : false
+Expected outcome : rejected
+
+it( 'Test: 008 is rejected if instanceId is undefined', function() {
+              var test = submission.isNew( id, false );
+              return expect( test ).to.eventually.be.rejected.and.have.property( 'status' ).that.equals( 400 );
+          } );
+

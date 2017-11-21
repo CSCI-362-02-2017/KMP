@@ -1,0 +1,11 @@
+Test number : 16
+Requirement being tested : set: when attempting to store new surveys
+Component : set
+Method : store surveys
+Inputs : survey
+Expected outcome : error
+
+it( 'Test 016: store_survey returns an error if the OpenRosa Form ID is an empty string', function() {
+            survey.openRosaId = '';
+            return expect( model.set( survey ) ).to.eventually.be.rejected;
+        } );

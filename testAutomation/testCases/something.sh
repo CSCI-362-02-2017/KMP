@@ -1,9 +1,10 @@
 #!/bin/bash
 
-variable="undefined"
-path_to_test_file="/home/patrick/KMP/testAutomation/project/enketo/enketo-express-2/test/server/testCases/testCase1.spec.js"
-
-cat > $path_to_test_file <<EOF
+export path_to_test_file="/home/patrick/KMP/testAutomation/project/enketo/enketo-express-2/test/server/testCases/testCase001.spec.js"
+export path_to_test_dir="/home/patrick/KMP/testAutomation/project/enketo/enketo-express-2/test/server/testCases/"
+generate_id_test() {
+  variable="$1"
+  cat > $path_to_test_file <<EOF
 /* global describe, require, it, afterEach */
 'use strict';
 
@@ -44,10 +45,11 @@ describe( 'Survey Model', function() {
     var id = 'AAAA';
     var instanceId = 'uuid:BBBB';
 
-    it( 'Test: 001 is rejected if id is undefined', function() {
-      var test = submission.isNew( $variable, instanceId );
-      return expect( test ).to.eventually.be.rejected.and.have.property( 'status' ).that.equals( 400 );
-    });
-  })
-})
+    it( 'is rejected if id is undefined', function() {
+            var test = submission.isNew( $variable, instanceId );
+            return expect( test ).to.eventually.be.rejected.and.have.property( 'status' ).that.equals( 400 );
+        } );
+  } );
+} );
 EOF
+}

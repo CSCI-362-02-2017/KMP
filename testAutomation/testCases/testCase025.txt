@@ -1,0 +1,12 @@
+Test number : 25
+Requirement being tested : get: when attempting to obtain a cached instance
+Component : get
+Method : get_cached_instnace
+Inputs : survey
+Expected outcome : 404 error
+
+it( 'Test 025: get_cached_instance returns an 404 error when instance record is not cahced, function() {
+            survey.instanceId = 'non-existing';
+            return expect( model.get( survey ) ).to.eventually.be.rejected
+                .and.to.have.property( 'status' ).that.equals( 404 );
+        } );

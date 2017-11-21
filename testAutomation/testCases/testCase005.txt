@@ -1,0 +1,9 @@
+Test number : 5
+Requirement being tested : new server/client connection
+Component : new submission
+Method : isNew() check
+Inputs : 0
+Expected outcome : rejected
+
+var test = submission.isNew( 0, instanceId );
+      return expect( test ).to.eventually.be.rejected.and.have.property( 'status' ).that.equals( 400 );

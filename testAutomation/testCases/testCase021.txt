@@ -1,0 +1,12 @@
+Test number : 21
+Requirement being tested : set: when attempting to cache an instance
+Component : set
+Method : set
+Inputs : survey
+Expected outcome : 400 error
+
+it( 'Test 021: cache_instance returns an 400 error when openRosaServer is missing', function() {
+            delete survey.openRosaServer;
+            return expect( model.set( survey ) ).to.eventually.be.rejected
+                .and.to.have.property( 'status' ).that.equals( 400 );
+        } );

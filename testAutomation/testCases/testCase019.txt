@@ -1,0 +1,12 @@
+Test number : 19
+Requirement being tested : set: when attempting to cache an instance
+Component : set
+Method : set
+Inputs : survey
+Expected outcome : 400 error
+
+it( 'Test 019: cache_instance returns an 400 error when instanceId is missing', function() {
+            delete survey.instanceId;
+            return expect( model.set( survey ) ).to.eventually.be.rejected
+                .and.to.have.property( 'status' ).that.equals( 400 );
+        } );

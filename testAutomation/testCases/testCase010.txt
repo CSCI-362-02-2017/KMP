@@ -1,0 +1,12 @@
+Test number : 10
+Requirement being tested : new server/client connection
+Component : new submission
+Method : isNew() check
+Inputs : -1
+Expected outcome : rejected
+
+it( 'Test 010:  is rejected if instanceId is -1', function() {
+              var test = submission.isNew( id, -1 );
+              return expect( test ).to.eventually.be.rejected.and.have.property( 'status' ).that.equals( 400 );
+          } );
+

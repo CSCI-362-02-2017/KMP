@@ -1,0 +1,11 @@
+Test number : 11
+Requirement being tested : GET request for existing Enketo ID's
+Component : GET
+Method : request
+Inputs : submission, enketoID
+Expected outcome : 400 error
+
+it( 'Test 011:  get_enketo_ID responds with 400 if no instanceID provided', function( done ) {
+            request( app ).get( '/submission/::' + enketoId )
+                .expect( 400, done );
+        } );

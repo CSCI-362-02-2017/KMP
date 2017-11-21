@@ -1,0 +1,12 @@
+Test number : 20
+Requirement being tested : set: when attempting to cache an instance
+Component : set
+Method : set
+Inputs : survey
+Expected outcome : 400 error
+
+it( 'Test 020: cache_instance returns an 400 error when openRosaId is missing', function() {
+            delete survey.openRosaId;
+            return expect( model.set( survey ) ).to.eventually.be.rejected
+                .and.to.have.property( 'status' ).that.equals( 400 );
+        } );

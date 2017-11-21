@@ -1,6 +1,0 @@
-Test number : 1
-Requirement being tested : new server/client connection
-Component : new submission
-Method : isNew() check
-Inputs : undefined, instanceId
-Expected outcome : rejected
