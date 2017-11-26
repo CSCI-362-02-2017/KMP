@@ -95,6 +95,10 @@ instanceId_test_inputs=("$test006_input" "$test007_input" "$test008_input" "$tes
 get_new_id_path() {
   path_to_test_file="$path_to_test_dir/id-$1.spec.js"
 }
+get_new_instanceId_path() {
+ path_to_test_file="$path_to_test_dir/instanceId-$1.spec.js"
+}
+
 for i in ${id_test_inputs[@]}
 do
  get_new_id_path "$i"
