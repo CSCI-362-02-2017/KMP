@@ -45,7 +45,7 @@ describe( 'Survey Model', function() {
     var id = 'AAAA';
     var instanceId = 'uuid:BBBB';
 
-    it( 'is rejected if id is undefined', function() {
+    it( 'is rejected if id is $variable', function() {
             var test = submission.isNew( $variable, instanceId );
             return expect( test ).to.eventually.be.rejected.and.have.property( 'status' ).that.equals( 400 );
         } );
