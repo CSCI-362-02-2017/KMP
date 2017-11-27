@@ -18,7 +18,6 @@ PATH_TO_KMP_ID_TEST_RESULTS="/home/patrick/KMP/testAutomation/reports/id_test_re
 
 run_id_tests () {
   mkdir -p "$PATH_TO_KMP_ID_TEST_RESULTS"
-  #docker-compose -f "$PATH_TO_ENKETO_DOCKER_COMPOSE" exec enketo sh -c "grunt test-and-build-kmp_id"
   docker exec -it enketo sh -c 'cd /app && /app/node_modules/.bin/grunt test-and-build-kmp_id'
 }
 
