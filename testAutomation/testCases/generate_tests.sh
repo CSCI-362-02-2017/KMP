@@ -159,7 +159,6 @@ get_new_id_path() {
   path_to_test_file="$path_to_test_dir/id-$COUNTER.spec.js"
 }
 get_new_instanceId_path() {
-<<<<<<< HEAD
   path_to_test_file="$path_to_test_dir/instanceId-$COUNTER.spec.js"
 }
 
@@ -181,13 +180,8 @@ get_new_obtain_cached_instance_path() {
 
 
 COUNTER=0
-for i in "${id_test_inputs[@]}"
-=======
- path_to_test_file="$path_to_test_dir/instanceId-$1.spec.js"
-}
 
-for i in ${id_test_inputs[@]}
->>>>>>> 630cca0d35b457b0f0901f3ae09256dba096031e
+for i in "${id_test_inputs[@]}"
 do
  get_new_id_path "$i"
  echo "$path_to_test_file"
