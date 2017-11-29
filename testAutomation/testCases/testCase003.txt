@@ -1,9 +1,12 @@
-Test number : 3
+Test number : 1
 Requirement being tested : new server/client connection
 Component : new submission
 Method : isNew() check
-Inputs : false
+Inputs : undefined
 Expected outcome : rejected
 
-var test = submission.isNew( false, instanceId );
-      return expect( test ).to.eventually.be.rejected.and.have.property( 'status' ).that.equals( 400 );
+it( 'Test 03 : submission is rejected if id is false', function() {
+            var test = submission.isNew( undefined, instanceId );
+            return expect( test ).to.eventually.be.rejected.and.have.property( 'status' ).that.equals( 400 );
+        } );
+

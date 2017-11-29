@@ -5,6 +5,6 @@ Method : set
 Inputs : survey
 Expected outcome : 400 error
 
-it( 'Test 023: cache_instance returns the survey object when the instance is cached successfully', function() {
-            return expect( model.set( survey ) ).to.eventually.deep.equal( survey );
+it( 'Test 023(fault): cache_instance returns the survey object when the instance is cached successfully', function() {
+            return expect( model.set(  ) ).to.eventually.deep.equal( survey );
         } );

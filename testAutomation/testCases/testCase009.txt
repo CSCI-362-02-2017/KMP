@@ -6,7 +6,7 @@ Inputs : 0
 Expected outcome : rejected
 
 it( 'Test: 009 is rejected if instanceId is undefined', function() {
-              var test = submission.isNew( id, -1 );
+              var test = submission.isNew( id, undefined );
               return expect( test ).to.eventually.be.rejected.and.have.property( 'status' ).that.equals( 400 );
           } );
 

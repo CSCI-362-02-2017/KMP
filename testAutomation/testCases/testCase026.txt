@@ -5,8 +5,9 @@ Method : get_cached_instnace
 Inputs : survey
 Expected outcome : 400 error
 
-it( 'Test 024: get_cached_instance returns an 400 error when instanceId is missing', function() {
-            delete survey.instanceId;
+it( 'Test 26 : obtain_cached_instance returns an 404 error when instance record not cached', function() {
+            survey.instanceId = 'non-existing';
             return expect( model.get( survey ) ).to.eventually.be.rejected
                 .and.to.have.property( 'status' ).that.equals( 404 );
         } );
+

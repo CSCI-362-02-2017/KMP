@@ -2,7 +2,7 @@ Test number : 18
 Requirement being tested : set: when attempting to store new surveys
 Component : set
 Method : store surveys
-Inputs : survey
+Inputs : survey 
 Expected outcome : error
 
 it( 'Test 018:  store_survey returns an enketo id if survey is stored successfully', function() {

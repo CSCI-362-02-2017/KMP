@@ -2,10 +2,10 @@ Test number : 17
 Requirement being tested : set: when attempting to store new surveys
 Component : set
 Method : store surveys
-Inputs : survey
+Inputs : survey.openRosaServer = '';
 Expected outcome : error
 
 it( 'Test 017:  store_survey returns an error if the OpenRosa Server is an empty string', function() {
-            surver.openRosaServer = '';
+            survey.openRosaServer = '';
             return expect( model.set( survey ) ).to.eventually.be.rejected;
         } );

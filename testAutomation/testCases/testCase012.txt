@@ -2,7 +2,7 @@ Test number : 12
 Requirement being tested : GET request for existing Enketo ID's
 Component : GET
 Method : request
-Inputs : submission, enketoID, instanceId
+Inputs : 'instanceId='
 Expected outcome : 400 error
 
 it( 'Test 012: get_enketo_ID responds with 400 if instanceId is empty', function( done ) {

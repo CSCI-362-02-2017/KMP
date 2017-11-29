@@ -2,7 +2,7 @@ Test number : 13
 Requirement being tested : GET request for existing Enketo ID's
 Component : GET
 Method : request
-Inputs : submission, enketoID, instanceId
+Inputs : 'instanceId=a'
 Expected outcome : 404 error
 
 it( 'Test 013: get_enketo_ID responds with 404 if instanceId is not found', function( done ) {

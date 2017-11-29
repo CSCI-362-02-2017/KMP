@@ -5,7 +5,7 @@ Method : isNew() check
 Inputs : null
 Expected outcome : rejected
 
-it( 'Test: 006 is rejected if instanceId is undefined', function() {
+it( 'Test: 07 submission is rejected if instanceId is null', function() {
               var test = submission.isNew( id, null );
               return expect( test ).to.eventually.be.rejected.and.have.property( 'status' ).that.equals( 400 );
           } );

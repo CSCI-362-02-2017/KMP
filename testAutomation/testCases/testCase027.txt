@@ -1,0 +1,17 @@
+Test number : 24
+Requirement being tested : get: when attempting to obtain a cached instance
+Component : get
+Method : get_cached_instnace
+Inputs : survey
+Expected outcome : 400 error
+
+it( 'Test 27 : obtain_cached_instance returns the survey object with the instance property when successful', function() {
+            promise = model.set( survey ).then( model.get );
+            return Promise.all( [
+                expect( promise ).to.eventually
+                .have.property( 'instance' ).that.equals( survey.instance ),
+                expect( promise ).to.eventually.
+                have.property( 'returnUrl' ).that.equals( survey.returnUrl )
+            ] );
+        } );
+
