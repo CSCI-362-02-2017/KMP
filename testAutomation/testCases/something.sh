@@ -45,6 +45,7 @@ describe( 'Survey Model', function() {
     var id = 'AAAA';
     var instanceId = 'uuid:BBBB';
 
+<<<<<<< HEAD
     $1
   })
 })
@@ -257,6 +258,12 @@ generate_set_survey_test() {
           } );
 
           $1
+=======
+    it( 'is rejected if id is $variable', function() {
+            var test = submission.isNew( $variable, instanceId );
+            return expect( test ).to.eventually.be.rejected.and.have.property( 'status' ).that.equals( 400 );
+        } );
+>>>>>>> 630cca0d35b457b0f0901f3ae09256dba096031e
   } );
 } );
 EOF

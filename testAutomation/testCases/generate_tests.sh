@@ -30,7 +30,6 @@ PATH_TO_ALL_TEST_RESULTS="/home/patrick/KMP/testAutomation/reports/all_test_resu
 
 run_id_tests () {
   mkdir -p "$PATH_TO_KMP_ID_TEST_RESULTS"
-  #docker-compose -f "$PATH_TO_ENKETO_DOCKER_COMPOSE" exec enketo sh -c "grunt test-and-build-kmp_id"
   docker exec -it enketo sh -c 'cd /app && /app/node_modules/.bin/grunt test-and-build-kmp_id'
 }
 run_instanceId_tests () {
@@ -159,8 +158,8 @@ obtain_cached_instance_test_inputs=("$input_line_25" "$input_line_26" "$input_li
 get_new_id_path() {
   path_to_test_file="$path_to_test_dir/id-$COUNTER.spec.js"
 }
-
 get_new_instanceId_path() {
+<<<<<<< HEAD
   path_to_test_file="$path_to_test_dir/instanceId-$COUNTER.spec.js"
 }
 
@@ -183,6 +182,12 @@ get_new_obtain_cached_instance_path() {
 
 COUNTER=0
 for i in "${id_test_inputs[@]}"
+=======
+ path_to_test_file="$path_to_test_dir/instanceId-$1.spec.js"
+}
+
+for i in ${id_test_inputs[@]}
+>>>>>>> 630cca0d35b457b0f0901f3ae09256dba096031e
 do
  get_new_id_path "$i"
  echo "$path_to_test_file"
