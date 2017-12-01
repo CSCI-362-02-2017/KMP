@@ -1,6 +1,6 @@
 #!/bin/bash
 
- set -x
+# set -x
 
 . something.sh
 
@@ -26,7 +26,8 @@ PATH_TO_KMP_CACHE_INSTANCE_TEST_RESULTS="/home/patrick/KMP/testAutomation/report
 
 PATH_TO_KMP_OBTAIN_CACHED_INSTANCE_TEST_RESULTS="/home/patrick/KMP/testAutomation/reports/obtain_cached_instance_test_results"
 
-PATH_TO_ALL_TEST_RESULTS="/home/patrick/KMP/testAutomation/reports/all_test_results"
+PATH_TO_TEST_RESULTS="/home/patrick/KMP/testAutomation/project/enketo/enketo-express-2/mochawesome-report"
+
 
 run_id_tests () {
   mkdir -p "$PATH_TO_KMP_ID_TEST_RESULTS"
@@ -208,8 +209,6 @@ do
 done
 INSTANCEID_TEST_RESULTS="$(run_instanceId_tests)"
 echo "$INSTANCEID_TEST_RESULTS" > "$PATH_TO_KMP_INSTANCEID_TEST_RESULTS/test-and-build-kmp_instanceId-$TIME_EXECUTED.html"
-echo "$INSTANCEID_TEST_RESULTS" >> "$TIME_EXECUTED.total.html"
-
 
 #for i in ${set_survey_test_inputs[@]}
 for i in "${set_survey_test_inputs[@]}"
@@ -242,18 +241,17 @@ done
 OBTAIN_CACHED_INSTANCE_TEST_RESULTS="$(run_obtain_cached_instance_tests)"
 echo "$OBTAIN_CACHED_INSTANCE_TEST_RESULTS" > "$PATH_TO_KMP_OBTAIN_CACHED_INSTANCE_TEST_RESULTS/test-and-build-kmp_obtain_cached_instance-$TIME_EXECUTED.html"
 
-concat_and_open_all_test_results () {
- mkdir -p "$PATH_TO_ALL_TEST_RESULTS"
- echo "$ID_TEST_RESULTS" >> "$PATH_TO_ALL_TEST_RESULTS/$TIME_EXECUTED.total.html"
- echo "$INSTANCEID_TEST_RESULTS" >> "$PATH_TO_ALL_TEST_RESULTS/$TIME_EXECUTED.total.html"
- echo "$SET_SURVEY_TEST_RESULTS" >> "$PATH_TO_ALL_TEST_RESULTS/$TIME_EXECUTED.total.html"
- echo "$CACHE_INSTANCE_TEST_RESULTS" >> "$PATH_TO_ALL_TEST_RESULTS/$TIME_EXECUTED.total.html"
- echo "$OBTAIN_CACHED_INSTANCE_TEST_RESULTS" >> "$PATH_TO_ALL_TEST_RESULTS/$TIME_EXECUTED.total.html"
+open_results() {
+
+xdg-open output-cache_instance.html
+xdg-open output-id.html 
+xdg-open output-instanceId.html 
+xdg-open output-obtain_cached_instance.html 
+xdg-open output-set_survey.html
 }
 
-concat_and_open_all_test_results
-# xdg-open "$PATH_TO_ALL_TEST_RESULTS/$TIME_EXECUTED.total.html"
- 
+do_it="$(open_results)"
+
 #for i in ${get_request_test_inputs[@]}
 #do
 # counter=7
