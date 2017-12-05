@@ -1,0 +1,127 @@
+[4mRunning "env:test" (env) task[24m
+
+[4mRunning "mochaTest:kmp_cache_instance" (mochaTest) task[24m
+{
+  "stats": {
+    "suites": 12,
+    "tests": 6,
+    "passes": 5,
+    "pending": 0,
+    "failures": 1,
+    "start": "2017-11-28T07:11:55.191Z",
+    "end": "2017-11-28T07:11:55.226Z",
+    "duration": 35
+  },
+  "tests": [
+    {
+      "title": "Test 019: cache_instance returns an 400 error when instanceId is missing",
+      "fullTitle": "Instance Model set: when attempting to cache an instance Test 019: cache_instance returns an 400 error when instanceId is missing",
+      "duration": 6,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Test 020: cache_instance returns an 400 error when openRosaId is missing",
+      "fullTitle": "Instance Model set: when attempting to cache an instance Test 020: cache_instance returns an 400 error when openRosaId is missing",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Test 021: cache_instance returns an 400 error when openRosaServer is missing",
+      "fullTitle": "Instance Model set: when attempting to cache an instance Test 021: cache_instance returns an 400 error when openRosaServer is missing",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Test 022: cache_instance returns an 400 error when instance is missing",
+      "fullTitle": "Instance Model set: when attempting to cache an instance Test 022: cache_instance returns an 400 error when instance is missing",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Test 023: cache_instance returns the survey object when the instance is cached successfully",
+      "fullTitle": "Instance Model set: when attempting to cache an instance Test 023: cache_instance returns the survey object when the instance is cached successfully",
+      "duration": 5,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Test 024: get_cached_instance returns an 400 error when instanceId is missing",
+      "fullTitle": "Instance Model set: when attempting to cache an instance Test 024: get_cached_instance returns an 400 error when instanceId is missing",
+      "duration": 2,
+      "currentRetry": 0,
+      "err": {
+        "message": "expected 400 to equal 404",
+        "showDiff": true,
+        "actual": 400,
+        "expected": 404,
+        "stack": "AssertionError: expected 400 to equal 404\n  at getBasePromise.then.then.newArgs (node_modules/chai-as-promised/lib/chai-as-promised.js:302:22)\n  at Array.<anonymous> (node_modules/lie/lib/index.js:88:21)\n  at nextTick (node_modules/immediate/lib/index.js:61:18)\n  at _combinedTickCallback (internal/process/next_tick.js:73:7)\n  at process._tickDomainCallback (internal/process/next_tick.js:128:9)\n"
+      }
+    }
+  ],
+  "pending": [],
+  "failures": [
+    {
+      "title": "Test 024: get_cached_instance returns an 400 error when instanceId is missing",
+      "fullTitle": "Instance Model set: when attempting to cache an instance Test 024: get_cached_instance returns an 400 error when instanceId is missing",
+      "duration": 2,
+      "currentRetry": 0,
+      "err": {
+        "message": "expected 400 to equal 404",
+        "showDiff": true,
+        "actual": 400,
+        "expected": 404,
+        "stack": "AssertionError: expected 400 to equal 404\n  at getBasePromise.then.then.newArgs (node_modules/chai-as-promised/lib/chai-as-promised.js:302:22)\n  at Array.<anonymous> (node_modules/lie/lib/index.js:88:21)\n  at nextTick (node_modules/immediate/lib/index.js:61:18)\n  at _combinedTickCallback (internal/process/next_tick.js:73:7)\n  at process._tickDomainCallback (internal/process/next_tick.js:128:9)\n"
+      }
+    }
+  ],
+  "passes": [
+    {
+      "title": "Test 019: cache_instance returns an 400 error when instanceId is missing",
+      "fullTitle": "Instance Model set: when attempting to cache an instance Test 019: cache_instance returns an 400 error when instanceId is missing",
+      "duration": 6,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Test 020: cache_instance returns an 400 error when openRosaId is missing",
+      "fullTitle": "Instance Model set: when attempting to cache an instance Test 020: cache_instance returns an 400 error when openRosaId is missing",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Test 021: cache_instance returns an 400 error when openRosaServer is missing",
+      "fullTitle": "Instance Model set: when attempting to cache an instance Test 021: cache_instance returns an 400 error when openRosaServer is missing",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Test 022: cache_instance returns an 400 error when instance is missing",
+      "fullTitle": "Instance Model set: when attempting to cache an instance Test 022: cache_instance returns an 400 error when instance is missing",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Test 023: cache_instance returns the survey object when the instance is cached successfully",
+      "fullTitle": "Instance Model set: when attempting to cache an instance Test 023: cache_instance returns the survey object when the instance is cached successfully",
+      "duration": 5,
+      "currentRetry": 0,
+      "err": {}
+    }
+  ]
+}[33mWarning: Task "mochaTest:kmp_cache_instance" failed. Use --force to continue.[39m
+
+[31mAborted due to warnings.[39m
+
+
+[4mExecution Time[24m[90m (2017-11-28 07:11:53 UTC-0)[39m
+loading tasks                  [34m1.6s[39m  [34m▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 80%[39m
+mochaTest:kmp_cache_instance  [34m391ms[39m  [34m▇▇▇▇▇▇▇ 20%[39m
+[35mTotal 2s[39m
+

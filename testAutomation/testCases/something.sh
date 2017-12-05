@@ -1,7 +1,7 @@
 #!/bin/bash
 
-export path_to_test_file="/home/patrick/KMP/testAutomation/project/enketo/enketo-express-2/test/server/testCases/testCase001.spec.js"
-export path_to_test_dir="/home/patrick/KMP/testAutomation/project/enketo/enketo-express-2/test/server/testCases/"
+export path_to_test_file="$PROJECT_DIR/enketo/enketo-express-2/test/server/testCases/testCase001.spec.js"
+export path_to_test_dir="$PROJECT_DIR/enketo/enketo-express-2/test/server"
 generate_id_test() {
   variable="$1"
   cat > $path_to_test_file <<EOF

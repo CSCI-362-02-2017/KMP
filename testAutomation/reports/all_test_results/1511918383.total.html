@@ -1,0 +1,272 @@
+[4mRunning "env:test" (env) task[24m
+
+[4mRunning "mochaTest:kmp_id" (mochaTest) task[24m
+
+[0m[0m
+[0m  Survey Model[0m
+[0m    isNew() check[0m
+    [31m  1) Test 01(fault) : submission is rejected if id is undefined[0m
+
+[0m  Survey Model[0m
+[0m    isNew() check[0m
+    [32m  ✓[0m[90m Test 02 : submission is rejected if id is null[0m
+
+[0m  Survey Model[0m
+[0m    isNew() check[0m
+    [32m  ✓[0m[90m Test 03 : submission is rejected if id is false[0m
+
+[0m  Survey Model[0m
+[0m    isNew() check[0m
+    [32m  ✓[0m[90m Test 04 : submission returns true for not-previously logged submissions[0m[33m (38ms)[0m
+
+[0m  Survey Model[0m
+[0m    isNew() check[0m
+    [32m  ✓[0m[90m Test 05: submission returns false for previously logged submissions[0m
+
+
+[92m [0m[32m 4 passing[0m[90m (204ms)[0m
+[31m  1 failing[0m
+
+[0m  1) Survey Model isNew() check Test 01(fault) : submission is rejected if id is undefined:
+
+      [31mAssertionError: expected 400 to equal 404[0m
+      [32m+ expected[0m [31m- actual[0m
+
+      [31m-400[0m
+      [32m+404[0m
+      [0m[90m
+    at getBasePromise.then.then.newArgs (node_modules/chai-as-promised/lib/chai-as-promised.js:302:22)
+    at Array.<anonymous> (node_modules/lie/lib/index.js:88:21)
+    at nextTick (node_modules/immediate/lib/index.js:61:18)
+    at _combinedTickCallback (internal/process/next_tick.js:73:7)
+    at process._tickDomainCallback (internal/process/next_tick.js:128:9)
+  
+[0m
+
+
+[[90mmochawesome[39m] Report JSON saved to /app/mochawesome-report/output-1511918389.json
+
+[[90mmochawesome[39m] Report HTML saved to /app/mochawesome-report/output-1511918389.html
+
+[33mWarning: Task "mochaTest:kmp_id" failed. Use --force to continue.[39m
+
+[31mAborted due to warnings.[39m
+
+
+[4mExecution Time[24m[90m (2017-11-29 01:19:45 UTC-0)[39m
+loading tasks       [34m4s[39m  [34m▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 76%[39m
+mochaTest:kmp_id  [34m1.2s[39m  [34m▇▇▇▇▇▇▇▇▇▇▇ 24%[39m
+[35mTotal 5.2s[39m
+
+[4mRunning "env:test" (env) task[24m
+
+[4mRunning "mochaTest:kmp_instanceId" (mochaTest) task[24m
+
+[0m[0m
+[0m  Survey Model[0m
+[0m    isNew() check[0m
+    [32m  ✓[0m[90m Test: 06 submission is rejected if instanceId is undefined[0m
+
+[0m  Survey Model[0m
+[0m    isNew() check[0m
+    [32m  ✓[0m[90m Test: 07 submission is rejected if instanceId is null[0m
+
+[0m  Survey Model[0m
+[0m    isNew() check[0m
+    [32m  ✓[0m[90m Test: 08 submission is rejected if instanceId is false[0m
+
+[0m  Survey Model[0m
+[0m    isNew() check[0m
+    [32m  ✓[0m[90m Test: 009 is rejected if instanceId is undefined[0m
+
+
+[92m [0m[32m 4 passing[0m[90m (48ms)[0m
+
+[[90mmochawesome[39m] Report JSON saved to /app/mochawesome-report/output-1511918395.json
+
+[[90mmochawesome[39m] Report HTML saved to /app/mochawesome-report/output-1511918395.html
+
+
+[4mRunning "karma:headless" (karma) task[24m
+[32m29 11 2017 01:20:05.255:INFO [framework.browserify]: [39mbundle built
+[32m29 11 2017 01:20:05.313:INFO [karma]: [39mKarma v1.7.1 server started at http://0.0.0.0:9876/
+[32m29 11 2017 01:20:05.314:INFO [launcher]: [39mLaunching browser ChromeHeadless with unlimited concurrency
+[32m29 11 2017 01:20:05.467:INFO [launcher]: [39mStarting browser ChromeHeadless
+[31m29 11 2017 01:20:05.505:ERROR [launcher]: [39mNo binary for ChromeHeadless browser on your platform.
+  Please, set "CHROME_BIN" env variable.
+[33mWarning: Task "karma:headless" failed. Use --force to continue.[39m
+
+[31mAborted due to warnings.[39m
+
+
+[4mExecution Time[24m[90m (2017-11-29 01:19:52 UTC-0)[39m
+loading tasks              [34m3.3s[39m  [34m▇▇▇▇▇▇▇▇▇▇ 25%[39m
+mochaTest:kmp_instanceId  [34m888ms[39m  [34m▇▇▇ 7%[39m
+karma:headless             [34m8.8s[39m  [34m▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 68%[39m
+[35mTotal 13s[39m
+
+[4mRunning "env:test" (env) task[24m
+
+[4mRunning "mochaTest:kmp_set_survey" (mochaTest) task[24m
+[31m>> [39mMocha exploded!
+[31m>> [39m/app/test/server/set_survey-10.spec.js:62[31m
+>> [39m    it( 'is rejected if id is it( 'Test 015: store_survey returns an error if the OpenRosa Form ID is missing', function() {[31m
+>> [39m        ^^^^^^^^^^^^^^^^^^^^^^^^^^^[31m
+>> [39mSyntaxError: missing ) after argument list[31m
+>> [39m  at createScript (vm.js:53:10)[31m
+>> [39m  at Object.runInThisContext (vm.js:95:10)[31m
+>> [39m  at Module._compile (module.js:543:28)[31m
+>> [39m  at Object.Module._extensions..js (module.js:580:10)[31m
+>> [39m  at Module.load (/app/node_modules/coffee-script/lib/coffee-script/register.js:45:36)[31m
+>> [39m  at tryModuleLoad (module.js:447:12)[31m
+>> [39m  at Function.Module._load (module.js:439:3)[31m
+>> [39m  at Module.require (module.js:498:17)[31m
+>> [39m  at require (internal/module.js:20:19)[31m
+>> [39m  at /app/node_modules/mocha/lib/mocha.js:231:27[31m
+>> [39m  at Array.forEach (native)[31m
+>> [39m  at Mocha.loadFiles (/app/node_modules/mocha/lib/mocha.js:228:14)[31m
+>> [39m  at Mocha.run (/app/node_modules/mocha/lib/mocha.js:514:10)[31m
+>> [39m  at MochaWrapper.run (/app/node_modules/grunt-mocha-test/tasks/lib/MochaWrapper.js:47:13)[31m
+>> [39m  at /app/node_modules/grunt-mocha-test/tasks/mocha-test.js:84:20[31m
+>> [39m  at capture (/app/node_modules/grunt-mocha-test/tasks/mocha-test.js:31:5)[31m
+>> [39m  at Object.<anonymous> (/app/node_modules/grunt-mocha-test/tasks/mocha-test.js:79:5)[31m
+>> [39m  at Object.<anonymous> (/app/node_modules/grunt/lib/grunt/task.js:255:15)[31m
+>> [39m  at Object.thisTask.fn (/app/node_modules/grunt/lib/grunt/task.js:73:16)[31m
+>> [39m  at Object.<anonymous> (/app/node_modules/grunt/lib/util/task.js:294:30)[31m
+>> [39m  at Task.runTaskFn (/app/node_modules/grunt/lib/util/task.js:244:24)[31m
+>> [39m  at Task.<anonymous> (/app/node_modules/grunt/lib/util/task.js:293:12)[31m
+>> [39m  at /app/node_modules/grunt/lib/util/task.js:220:11[31m
+>> [39m  at _combinedTickCallback (internal/process/next_tick.js:73:7)[31m
+>> [39m  at process._tickDomainCallback (internal/process/next_tick.js:128:9)[31m
+>> [39m  at Module.runMain (module.js:607:11)[31m
+>> [39m  at run (bootstrap_node.js:427:7)[31m
+>> [39m  at startup (bootstrap_node.js:151:9)[31m
+>> [39m  at bootstrap_node.js:542:3
+[33mWarning: Task "mochaTest:kmp_set_survey" failed. Use --force to continue.[39m
+
+[31mAborted due to warnings.[39m
+
+
+[4mExecution Time[24m[90m (2017-11-29 01:20:07 UTC-0)[39m
+loading tasks              [34m3.8s[39m  [34m▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 90%[39m
+mochaTest:kmp_set_survey  [34m425ms[39m  [34m▇▇▇▇ 10%[39m
+[35mTotal 4.2s[39m
+
+[4mRunning "env:test" (env) task[24m
+
+[4mRunning "mochaTest:kmp_cache_instance" (mochaTest) task[24m
+
+[0m[0m
+[0m  Instance Model[0m
+[0m    set: when attempting to cache an instance[0m
+    [32m  ✓[0m[90m Test 019: cache_instance returns an 400 error when instanceId is missing[0m
+
+[0m  Instance Model[0m
+[0m    set: when attempting to cache an instance[0m
+    [32m  ✓[0m[90m Test 020: cache_instance returns an 400 error when openRosaId is missing[0m
+
+[0m  Instance Model[0m
+[0m    set: when attempting to cache an instance[0m
+    [32m  ✓[0m[90m Test 021: cache_instance returns an 400 error when openRosaServer is missing[0m
+
+[0m  Instance Model[0m
+[0m    set: when attempting to cache an instance[0m
+    [32m  ✓[0m[90m Test 022: cache_instance returns an 400 error when instance is missing[0m
+
+[0m  Instance Model[0m
+[0m    set: when attempting to cache an instance[0m
+    [31m  1) Test 023(fault): cache_instance returns the survey object when the instance is cached successfully[0m
+
+[0m  Instance Model[0m
+[0m    set: when attempting to cache an instance[0m
+    [31m  2) Test 024: get_cached_instance returns an 400 error when instanceId is missing[0m
+
+
+[92m [0m[32m 4 passing[0m[90m (90ms)[0m
+[31m  2 failing[0m
+
+[0m  1) Instance Model set: when attempting to cache an instance Test 023(fault): cache_instance returns the survey object when the instance is cached successfully:
+[0m[31m     Error: Bad request. Survey information not complete or invalid[0m[90m
+    at app/models/instance-model.js:25:21
+    at tryToUnwrap (node_modules/lie/lib/index.js:171:5)
+    at tryCatch (node_modules/lie/lib/index.js:183:17)
+    at safelyResolveThenable (node_modules/lie/lib/index.js:174:16)
+    at new Promise (node_modules/lie/lib/index.js:32:5)
+    at Object._cacheInstance [as set] (app/models/instance-model.js:23:12)
+    at Context.<anonymous> (test/server/cache_instance-18.spec.js:43:34)
+  
+[0m
+[0m  2) Instance Model set: when attempting to cache an instance Test 024: get_cached_instance returns an 400 error when instanceId is missing:
+
+      [31mAssertionError: expected 400 to equal 404[0m
+      [32m+ expected[0m [31m- actual[0m
+
+      [31m-400[0m
+      [32m+404[0m
+      [0m[90m
+    at getBasePromise.then.then.newArgs (node_modules/chai-as-promised/lib/chai-as-promised.js:302:22)
+    at Array.<anonymous> (node_modules/lie/lib/index.js:88:21)
+    at nextTick (node_modules/immediate/lib/index.js:61:18)
+    at _combinedTickCallback (internal/process/next_tick.js:73:7)
+    at process._tickDomainCallback (internal/process/next_tick.js:128:9)
+  
+[0m
+
+
+[[90mmochawesome[39m] Report JSON saved to /app/mochawesome-report/output-1511918417.json
+
+[[90mmochawesome[39m] Report HTML saved to /app/mochawesome-report/output-1511918417.html
+
+[33mWarning: Task "mochaTest:kmp_cache_instance" failed. Use --force to continue.[39m
+
+[31mAborted due to warnings.[39m
+
+
+[4mExecution Time[24m[90m (2017-11-29 01:20:13 UTC-0)[39m
+loading tasks                 [34m4.1s[39m  [34m▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 77%[39m
+mochaTest:kmp_cache_instance  [34m1.2s[39m  [34m▇▇▇▇▇▇▇▇ 22%[39m
+[35mTotal 5.3s[39m
+
+[4mRunning "env:test" (env) task[24m
+
+[4mRunning "mochaTest:kmp_obtain_cached_instance" (mochaTest) task[24m
+
+[0m[0m
+[0m  Instance Model[0m
+[0m    get: when attempting to obtain a cached instance[0m
+    [32m  ✓[0m[90m Test 25 : obtain_cached_instance returns an 400 error when instanceId is missing[0m
+
+[0m  Instance Model[0m
+[0m    get: when attempting to obtain a cached instance[0m
+    [32m  ✓[0m[90m Test 26 : obtain_cached_instance returns an 404 error when instance record not cached[0m
+
+[0m  Instance Model[0m
+[0m    get: when attempting to obtain a cached instance[0m
+    [32m  ✓[0m[90m Test 27 : obtain_cached_instance returns the survey object with the instance property when successful[0m
+
+
+[92m [0m[32m 3 passing[0m[90m (85ms)[0m
+
+[[90mmochawesome[39m] Report JSON saved to /app/mochawesome-report/output-1511918425.json
+
+[[90mmochawesome[39m] Report HTML saved to /app/mochawesome-report/output-1511918425.html
+
+
+[4mRunning "karma:headless" (karma) task[24m
+[32m29 11 2017 01:20:36.500:INFO [framework.browserify]: [39mbundle built
+[32m29 11 2017 01:20:36.578:INFO [karma]: [39mKarma v1.7.1 server started at http://0.0.0.0:9876/
+[32m29 11 2017 01:20:36.578:INFO [launcher]: [39mLaunching browser ChromeHeadless with unlimited concurrency
+[32m29 11 2017 01:20:36.598:INFO [launcher]: [39mStarting browser ChromeHeadless
+[31m29 11 2017 01:20:36.607:ERROR [launcher]: [39mNo binary for ChromeHeadless browser on your platform.
+  Please, set "CHROME_BIN" env variable.
+[33mWarning: Task "karma:headless" failed. Use --force to continue.[39m
+
+[31mAborted due to warnings.[39m
+
+
+[4mExecution Time[24m[90m (2017-11-29 01:20:21 UTC-0)[39m
+loading tasks              [34m4s[39m  [34m▇▇▇▇▇▇▇ 27%[39m
+mochaTest:k...d_instance   [34m1s[39m  [34m▇▇ 7%[39m
+karma:headless            [34m10s[39m  [34m▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 66%[39m
+[35mTotal 15.1s[39m
+

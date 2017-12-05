@@ -1,0 +1,51 @@
+[4mRunning "env:test" (env) task[24m
+
+[4mRunning "mochaTest:kmp_cache_instance" (mochaTest) task[24m
+
+[0m[0m
+[0m  Instance Model[0m
+[0m    set: when attempting to cache an instance[0m
+    [32m  ✓[0m[90m Test 024: get_cached_instance returns an 400 error when instanceId is missing[0m
+
+[0m  Instance Model[0m
+[0m    set: when attempting to cache an instance[0m
+    [32m  ✓[0m[90m Test 019: cache_instance returns an 400 error when instanceId is missing[0m
+
+[0m  Instance Model[0m
+[0m    set: when attempting to cache an instance[0m
+    [32m  ✓[0m[90m Test 020: cache_instance returns an 400 error when openRosaId is missing[0m
+
+[0m  Instance Model[0m
+[0m    set: when attempting to cache an instance[0m
+    [32m  ✓[0m[90m Test 021: cache_instance returns an 400 error when openRosaServer is missing[0m
+
+[0m  Instance Model[0m
+[0m    set: when attempting to cache an instance[0m
+    [32m  ✓[0m[90m Test 022: cache_instance returns an 400 error when instance is missing[0m
+
+[0m  Instance Model[0m
+[0m    set: when attempting to cache an instance[0m
+    [32m  ✓[0m[90m Test 023: cache_instance returns the survey object when the instance is cached successfully[0m
+
+
+[92m [0m[32m 6 passing[0m[90m (38ms)[0m
+
+
+[4mRunning "karma:headless" (karma) task[24m
+[32m28 11 2017 04:45:20.621:INFO [framework.browserify]: [39mbundle built
+[32m28 11 2017 04:45:20.637:INFO [karma]: [39mKarma v1.7.1 server started at http://0.0.0.0:9876/
+[32m28 11 2017 04:45:20.637:INFO [launcher]: [39mLaunching browser ChromeHeadless with unlimited concurrency
+[32m28 11 2017 04:45:20.792:INFO [launcher]: [39mStarting browser ChromeHeadless
+[31m28 11 2017 04:45:20.798:ERROR [launcher]: [39mNo binary for ChromeHeadless browser on your platform.
+  Please, set "CHROME_BIN" env variable.
+[33mWarning: Task "karma:headless" failed. Use --force to continue.[39m
+
+[31mAborted due to warnings.[39m
+
+
+[4mExecution Time[24m[90m (2017-11-28 04:45:09 UTC-0)[39m
+loading tasks                    [34m7s[39m  [34m▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 59%[39m
+mochaTest:kmp_cache_instance  [34m442ms[39m  [34m▇▇ 4%[39m
+karma:headless                 [34m4.3s[39m  [34m▇▇▇▇▇▇▇▇▇▇▇▇ 37%[39m
+[35mTotal 11.8s[39m
+

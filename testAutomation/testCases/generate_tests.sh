@@ -8,25 +8,16 @@ GRUNT_COMMAND='test-and-build-kmp_id'
 
 TIME_EXECUTED="$(date +%s)"
 
-PATH_TO_ENKETO="/home/patrick/KMP/testAutomation/project/enketo/enketo-express-2"
-
-PATH_TO_TESTER_FILE_DIR="/home/patrick/KMP/testAutomation/project/enketo/enketo-express-2/test/server"
-
+PATH_TO_ENKETO="$PROJECT_DIR/enketo/enketo-express-2"
+PATH_TO_TESTER_FILE_DIR="$PROJECT_DIR/enketo/enketo-express-2/test/server"
 PATH_TO_ENKETO_DOCKER_COMPOSE="$PATH_TO_ENKETO/docker-compose.yml"
-
-PATH_TO_KMP_ID_TEST_RESULTS="/home/patrick/KMP/testAutomation/reports/id_test_results"
-
-PATH_TO_KMP_INSTANCEID_TEST_RESULTS="/home/patrick/KMP/testAutomation/reports/instanceId_test_results"
-
-PATH_TO_KMP_GET_REQUEST_TEST_RESULTS="/home/patrick/KMP/testAutomation/reports/get_request_test_results"
-
-PATH_TO_KMP_SET_SURVEY_TEST_RESULTS="/home/patrick/KMP/testAutomation/reports/set_survey_test_results"
-
-PATH_TO_KMP_CACHE_INSTANCE_TEST_RESULTS="/home/patrick/KMP/testAutomation/reports/cache_instance_test_results"
-
-PATH_TO_KMP_OBTAIN_CACHED_INSTANCE_TEST_RESULTS="/home/patrick/KMP/testAutomation/reports/obtain_cached_instance_test_results"
-
-PATH_TO_TEST_RESULTS="/home/patrick/KMP/testAutomation/project/enketo/enketo-express-2/mochawesome-report"
+PATH_TO_KMP_ID_TEST_RESULTS="$REPORTS_DIR/id_test_results"
+PATH_TO_KMP_INSTANCEID_TEST_RESULTS="$REPORTS_DIR/instanceId_test_results"
+PATH_TO_KMP_GET_REQUEST_TEST_RESULTS="$REPORTS_DIR/get_request_test_results"
+PATH_TO_KMP_SET_SURVEY_TEST_RESULTS="$REPORTS_DIR/set_survey_test_results"
+PATH_TO_KMP_CACHE_INSTANCE_TEST_RESULTS="$REPORTS_DIR/cache_instance_test_results"
+PATH_TO_KMP_OBTAIN_CACHED_INSTANCE_TEST_RESULTS="$REPORTS_DIR/obtain_cached_instance_test_results"
+PATH_TO_TEST_RESULTS="$PROJECT_DIR/enketo/enketo-express-2/mochawesome-report"
 
 
 run_id_tests () {
@@ -55,9 +46,8 @@ run_obtain_cached_instance_tests () {
 }
 
 
-export path_to_test_file="/home/patrick/KMP/testAutomation/project/enketo/enketo-express-2/test/server/testCases/testCase001.spec.js"
-export path_to_test_dir="/home/patrick/KMP/testAutomation/project/enketo/enketo-express-2/test/server"
-
+export path_to_test_file="$PROJECT_DIR/enketo/enketo-express-2/test/server/testCases/testCase001.spec.js"
+export path_to_test_dir="$PROJECT_DIR/enketo/enketo-express-2/test/server"
 
 
 # path_to_kmp="$(/home/patrick/KMP/testAutomation)"

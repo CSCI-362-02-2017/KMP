@@ -1,0 +1,39 @@
+[4mRunning "env:test" (env) task[24m
+
+[4mRunning "mochaTest:kmp_instanceId" (mochaTest) task[24m
+
+[0m[0m
+[0m  Survey Model[0m
+[0m    isNew() check[0m
+    [32m  ✓[0m[90m Test:  is rejected if instanceId is false[0m
+
+[0m  Survey Model[0m
+[0m    isNew() check[0m
+    [32m  ✓[0m[90m Test:  is rejected if instanceId is null[0m
+
+[0m  Survey Model[0m
+[0m    isNew() check[0m
+    [32m  ✓[0m[90m Test:  is rejected if instanceId is undefined[0m
+
+
+[92m [0m[32m 3 passing[0m[90m (56ms)[0m
+
+
+[4mRunning "karma:headless" (karma) task[24m
+[32m28 11 2017 04:30:01.378:INFO [framework.browserify]: [39mbundle built
+[32m28 11 2017 04:30:01.404:INFO [karma]: [39mKarma v1.7.1 server started at http://0.0.0.0:9876/
+[32m28 11 2017 04:30:01.405:INFO [launcher]: [39mLaunching browser ChromeHeadless with unlimited concurrency
+[32m28 11 2017 04:30:01.414:INFO [launcher]: [39mStarting browser ChromeHeadless
+[31m28 11 2017 04:30:01.415:ERROR [launcher]: [39mNo binary for ChromeHeadless browser on your platform.
+  Please, set "CHROME_BIN" env variable.
+[33mWarning: Task "karma:headless" failed. Use --force to continue.[39m
+
+[31mAborted due to warnings.[39m
+
+
+[4mExecution Time[24m[90m (2017-11-28 04:29:47 UTC-0)[39m
+loading tasks             [34m10.1s[39m  [34m▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 72%[39m
+mochaTest:kmp_instanceId  [34m502ms[39m  [34m▇▇ 4%[39m
+karma:headless             [34m3.5s[39m  [34m▇▇▇▇▇▇▇▇▇ 25%[39m
+[35mTotal 14.2s[39m
+
