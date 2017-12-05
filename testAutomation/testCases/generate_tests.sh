@@ -2,7 +2,7 @@
 
 # set -x
 
-. something.sh
+. "$TEST_CASES_DIR/something.sh"
 
 GRUNT_COMMAND='test-and-build-kmp_id'
 
@@ -68,78 +68,78 @@ export path_to_test_dir="/home/patrick/KMP/testAutomation/project/enketo/enketo-
 
 # test_input=${input_line##*:}
 
- 
+
 
 # echo "1 $testCase_file" # "$path_to_kmp/testCasesinput_line_*"
 #done
 
 
-input_line_1=$(cat testCase001.txt | grep -A 10 "it(")
+input_line_1=$(cat $TEST_CASES_DIR/testCase001.txt | grep -A 10 "it(")
 
-input_line_2=$(cat testCase002.txt | grep -A 10 "it(")
+input_line_2=$(cat $TEST_CASES_DIR/testCase002.txt | grep -A 10 "it(")
 
-input_line_3=$(cat testCase003.txt | grep -A 10 "it(")
+input_line_3=$(cat $TEST_CASES_DIR/testCase003.txt | grep -A 10 "it(")
 
-input_line_4=$(cat testCase004.txt | grep -A 10 "it(")
+input_line_4=$(cat $TEST_CASES_DIR/testCase004.txt | grep -A 10 "it(")
 
-input_line_5=$(cat testCase005.txt | grep -A 10 "it(")
+input_line_5=$(cat $TEST_CASES_DIR/testCase005.txt | grep -A 10 "it(")
 
-input_line_6=$(cat testCase006.txt | grep -A 10 "it(")
+input_line_6=$(cat $TEST_CASES_DIR/testCase006.txt | grep -A 10 "it(")
 
-input_line_7=$(cat testCase007.txt | grep -A 10 "it(")
+input_line_7=$(cat $TEST_CASES_DIR/testCase007.txt | grep -A 10 "it(")
 
-input_line_8=$(cat testCase008.txt | grep -A 10 "it(")
+input_line_8=$(cat $TEST_CASES_DIR/testCase008.txt | grep -A 10 "it(")
 
-input_line_9=$(cat testCase009.txt | grep -A 10 "it(")
+input_line_9=$(cat $TEST_CASES_DIR/testCase009.txt | grep -A 10 "it(")
 test009_input=${input_line_9##*:}
 
-input_line_11=$(cat testCase011.txt | grep -A 10 "it(")
+input_line_11=$(cat $TEST_CASES_DIR/testCase011.txt | grep -A 10 "it(")
 test011_input=${input_line_11##*:}
 
-input_line_12=$(cat testCase012.txt | grep -A 10 "it(")
+input_line_12=$(cat $TEST_CASES_DIR/testCase012.txt | grep -A 10 "it(")
 test012_input=${input_line_12##*:}
 
-input_line_13=$(cat testCase013.txt | grep -A 10 "it(")
+input_line_13=$(cat $TEST_CASES_DIR/testCase013.txt | grep -A 10 "it(")
 test013_input=${input_line_13##*:}
 
-input_line_14=$(cat testCase014.txt | grep -A 10 "it(")
+input_line_14=$(cat $TEST_CASES_DIR/testCase014.txt | grep -A 10 "it(")
 test014_input=${input_line_14##*:}
 
-input_line_15=$(cat testCase015.txt | grep -A 10 "it(")
+input_line_15=$(cat $TEST_CASES_DIR/testCase015.txt | grep -A 10 "it(")
 test015_input=${input_line_15##*:}
 
-input_line_16=$(cat testCase016.txt | grep -A 10 "it(")
+input_line_16=$(cat $TEST_CASES_DIR/testCase016.txt | grep -A 10 "it(")
 test016_input=${input_line_16##*:}
 
-input_line_17=$(cat testCase017.txt | grep -A 10 "it(")
+input_line_17=$(cat $TEST_CASES_DIR/testCase017.txt | grep -A 10 "it(")
 test017_input=${input_line_17##*:}
 
-input_line_18=$(cat testCase018.txt | grep -A 10 "it(")
+input_line_18=$(cat $TEST_CASES_DIR/testCase018.txt | grep -A 10 "it(")
 test018_input=${input_line_18##*:}
 
-input_line_19=$(cat testCase019.txt | grep -A 10 "it(")
+input_line_19=$(cat $TEST_CASES_DIR/testCase019.txt | grep -A 10 "it(")
 test019_input=${input_line_19##*:}
 
-input_line_20=$(cat testCase020.txt | grep -A 10 "it(")
+input_line_20=$(cat $TEST_CASES_DIR/testCase020.txt | grep -A 10 "it(")
 test011_input=${input_line_11##*:}
 
-input_line_21=$(cat testCase021.txt | grep -A 10 "it(")
+input_line_21=$(cat $TEST_CASES_DIR/testCase021.txt | grep -A 10 "it(")
 test021_input=${input_line_21##*:}
 
-input_line_22=$(cat testCase022.txt | grep -A 10 "it(")
+input_line_22=$(cat $TEST_CASES_DIR/testCase022.txt | grep -A 10 "it(")
 test022_input=${input_line_22##*:}
 
-input_line_23=$(cat testCase023.txt | grep -A 10 "it(")
+input_line_23=$(cat $TEST_CASES_DIR/testCase023.txt | grep -A 10 "it(")
 test023_input=${input_line_23##*:}
 
-input_line_24=$(cat testCase024.txt | grep -A 10 "it(")
+input_line_24=$(cat $TEST_CASES_DIR/testCase024.txt | grep -A 10 "it(")
 test024_input=${input_line_24##*:}
 
-input_line_25=$(cat testCase025.txt | grep -A 10 "it(")
+input_line_25=$(cat $TEST_CASES_DIR/testCase025.txt | grep -A 10 "it(")
 
-input_line_26=$(cat testCase026.txt | grep -A 10 "it(")
+input_line_26=$(cat $TEST_CASES_DIR/testCase026.txt | grep -A 10 "it(")
 
-input_line_27=$(cat testCase027.txt | grep -A 10 "it(")
+input_line_27=$(cat $TEST_CASES_DIR/testCase027.txt | grep -A 10 "it(")
 
 
 
@@ -242,15 +242,17 @@ OBTAIN_CACHED_INSTANCE_TEST_RESULTS="$(run_obtain_cached_instance_tests)"
 echo "$OBTAIN_CACHED_INSTANCE_TEST_RESULTS" > "$PATH_TO_KMP_OBTAIN_CACHED_INSTANCE_TEST_RESULTS/test-and-build-kmp_obtain_cached_instance-$TIME_EXECUTED.html"
 
 open_results() {
+cd '../project/enketo/enketo-express-2/mochawesome-report'
+xdg-open output-obtain_cached_instance.html &
+xdg-open output-set_survey.html &
+xdg-open output-cache_instance.html &
+xdg-open output-id.html &
+xdg-open output-instanceId.html &
 
-xdg-open output-cache_instance.html
-xdg-open output-id.html 
-xdg-open output-instanceId.html 
-xdg-open output-obtain_cached_instance.html 
-xdg-open output-set_survey.html
 }
 
-do_it="$(open_results)"
+
+open_results
 
 #for i in ${get_request_test_inputs[@]}
 #do
