@@ -22,7 +22,7 @@
 
 ## 4)
 ### When the script is done running it will bash you into the project root from within the container, you may ```exit``` out of that container to be returned to your local machine, where you can perform the demo.
-### move to the testAutomation directory and copy/replace the Gruntfile.js located in the PROJECT ROOT with the Gruntfile.js that is in the testAutomation directory
+### move to the testAutomation directory and copy/replace the Gruntfile.js located in the PROJECT ROOT with the Gruntfile.js that is in the testAutomation directory (``` cp Gruntfile.js /KMP/testAutomation/project/enketo/enketo-express-2/Gruntfile.js ```)
 ### From the project root download and apply the test reporter mochawesome.```sudo apt-get install npm``` then ``` npm install --global mocha``` then ```sudo npm install --save-dev mochawesome``` then ``` npm install --global mocha``` and then ```mocha Gruntfile.js --reporter mochawesome```
 
 ## 5) 
