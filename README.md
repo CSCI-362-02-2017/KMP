@@ -18,12 +18,12 @@
 ## 3)
 ### Copy the Docker_run_script from the enketo directory into the newly created enketo-express-2 directory, this is the project root.
 ### Move into the project root and run the Docker_run_script that you just moved
-### While that is working you can open up another terminal and run ```docker ps``` to confirm that the containers are up and running. From the same terminal you may type ```docker logs -f ``` to confirm that there is an npm install happening inside the enketo container
+### When the script is done running you can open up another terminal and run ```sudo docker ps``` to confirm that the containers are up and running. From the same terminal you may type ```sudo docker logs -f enketo ``` to confirm that there is an npm install happening inside the enketo container, give this time to finish as well. (approx 3 minutes)
 
 ## 4)
 ### When the script is done running it will bash you into the project root from within the container, you may ```exit``` out of that container to be returned to your local machine, where you can perform the demo.
-### move to the testAutomation directory and copy/replace the Gruntfile.js located in the PROJECT ROOT with the Gruntfile.js that is in the testAutomation directory (``` cp Gruntfile.js /KMP/testAutomation/project/enketo/enketo-express-2/Gruntfile.js ```)
-### From the project root download and apply the test reporter mochawesome.```sudo apt-get install npm``` then ``` npm install --global mocha``` then ```sudo npm install --save-dev mochawesome``` then ``` npm install --global mocha``` and then ```mocha Gruntfile.js --reporter mochawesome```
+### move to the testAutomation directory and copy/replace the Gruntfile.js located in the PROJECT ROOT with the Gruntfile.js that is in the testAutomation directory (``` cp Gruntfile.js ~(path-to-projcet)/enketo-express-2/Gruntfile.js ```)pt-get install nodejs-legacys
+### From the project root download and apply the test reporter mochawesome.```sudo apt-get install npm``` followed by ```sudo apt-get install nodejs-legacy``` then ``` sudo npm install --global mocha``` then ```sudo npm install --save-dev mochawesome``` and then ```sudo mocha Gruntfile.js --reporter mochawesome```
 
 ## 5) 
 ### Now you can move into the scripts folder from the testAutomation directory
