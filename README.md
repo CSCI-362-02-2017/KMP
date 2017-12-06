@@ -5,7 +5,7 @@
 ### Patrick McCardle
 # Quick demo instructions
 ## 1) 
-### Download and install all pre-requiresits
+### Download and install all pre-reqs
 
 #### First, clone this repo
 #### Move into the install_scripts directory
