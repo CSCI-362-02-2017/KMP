@@ -30,3 +30,6 @@
 ### Perform (sudo) ./runAllTests.sh
 
 ### Testing report will be displayed across 5 tabs
+
+### !!! 
+### If full testing report does not display, cd into the project root, then into the mochawesome-report directory typing ```xdg-open filename.html``` will open the files
