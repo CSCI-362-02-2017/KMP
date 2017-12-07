@@ -8,7 +8,7 @@
 ### Download and install all pre-reqs
 
 ### We recommend that all commands are run using sudo permissions.
-#### First, clone this repo using the command ```git clone https://github.com/CSCI-362-02-2017/KMP.git```.
+#### First, clone this repo using the command, ```git clone https://github.com/CSCI-362-02-2017/KMP.git```
 ##### [Note: Github will require you to have access to this repo. Also Note: Some areas on certains machines have restricted permissions. We recommend that this repo is cloned in a location that doesn't have permission problems, if you are unsure, just clone the repo onto your desktop.]
 #### Move into the install_scripts directory, using the command ```cd ./KMP/install_scripts```
 #### Run all 3 scripts (download_and_install_docker, download_and_install_atom, nvm_install).
