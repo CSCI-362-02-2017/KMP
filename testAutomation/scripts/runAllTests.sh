@@ -7,7 +7,6 @@ test_driver_filename='generate_tests.sh'
 # ------------------------- [START] get project path ------------------------- #
 # get full path to this dir and others
 PATH_TO_KMP="$(cd ..; pwd)"
-echo $PATH_TO_KMP
 scripts_dir="$PATH_TO_KMP/testAutomation/scripts"
 test_cases_dir="$PATH_TO_KMP/testAutomation/testCases"
 project_dir="$PATH_TO_KMP/testAutomation/project"
