@@ -36,7 +36,8 @@
 
 ## 5) 
 ### {Important Note: The testing summary will not display if your browser is open. It is therefore necessary that you close all of your browser windows before executing this last command.}
-#### After you have run all the above commmands and waited for everything to install you can execute the tests from the testAutomation directory, using the command
+#### After you have run all the above commmands and waited for everything to install you can execute the tests from the testAutomation directory, using the commands
+#### ```cd ..; cd ..; cd ..;```
 #### ```sudo ./scripts/runAllTests.sh```
 
 #### The testing report will be displayed across 5 tabs
