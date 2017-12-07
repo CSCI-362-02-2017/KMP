@@ -8,8 +8,9 @@
 ### Download and install all pre-reqs
 
 #### First, clone this repo
+###We recommend that all commands are run using sudo permissions.
 #### Move into the install_scripts directory
-#### Run all 3 scripts (download_and_install_docker, download_and_install_atom, nvm_install)
+#### Run all 3 scripts (download_and_install_docker, download_and_install_atom, nvm_install).
 
 ## 2)
 ### Move into the testAutomation/project/enketo directory
