@@ -12,7 +12,7 @@
 ##### [Note: Github will require you to have access to this repo. Also Note: Some areas on certains machines have restricted permissions. We recommend that this repo is cloned in a location that doesn't have permission problems. If you are unsure, just clone the repo onto your desktop.]
 #### Move into the install_scripts directory, using the command ```cd ./KMP/install_scripts```
 #### Run all 3 scripts (download_and_install_docker, download_and_install_atom, nvm_install).
-##### ```sudo ./download_and_install_docker``` -- ```sudo ./download_and_install_atom``` -- ```sudo ./nvm_install```
+#### ```sudo ./download_and_install_docker``` -- ```sudo ./download_and_install_atom``` -- ```sudo ./nvm_install```
 
 ## 2)
 #### Move into the /testAutomation/project/enketo, using the commands ```cd ..``` followed by ```cd ./testAutomation/project/enketo```
@@ -35,9 +35,9 @@
 
 ## 5) 
 ### {Important note: The testing summary will not display if your browser is open. It is therefore necessary that you close all of your browser windows before executing this last command.}
-#### After you have run all the above commmands and waited for everything to install you can execute the tests folder from the testAutomation directory, using the command
+#### After you have run all the above commmands and waited for everything to install you can execute the tests from the testAutomation directory, using the command
 #### ```sudo ./scripts/runAllTests.sh```
 
-#### Testing report will be displayed across 5 tabs
+#### The testing report will be displayed across 5 tabs
 
 ### If full testing report does not display, cd into the project root, then into the mochawesome-report directory typing ```xdg-open filename.html``` will open the files.
