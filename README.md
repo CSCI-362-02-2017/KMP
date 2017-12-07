@@ -21,11 +21,12 @@
 ## 3)
 #### Copy the Docker_run_script from the enketo directory into the newly created enketo-express-2 directory using the command ```cp Docker_run_script $(pwd)/enketo-express-2/```.
 #### Move into the project root, using the command ```cd ./enketo-express-2``` and run the Docker_run_script that you just copied using the command ```sudo ./Docker_run_script```
-#### When the script is done running you can open up another terminal and run ```sudo docker ps``` to confirm that the containers are up and running. From the same terminal you may type ```sudo docker logs -f enketo``` to confirm that there is an npm install happening inside the enketo container, give this time to finish as well as it may take some time depending on your system. Also note if you ever get stuck in a command during this process, use ```CTRL + C``` to exit any currently running commands. Beware as using this can cancel or terminate installing scripts.
+#### When the script is done running you can open up another terminal and run ```sudo docker ps``` to confirm that the containers are up and running. From the same terminal you may type ```sudo docker logs -f enketo``` to confirm that there is an npm install happening inside the enketo container, give this time to finish as well as it may take some time depending on your system. 
+##### [Also Note: if you ever get stuck in a command during this process, use ```CTRL + C``` to exit any currently running commands. Beware as using this can cancel or terminate installing scripts.]
 
 ## 4)
 #### When the script is done running it will bash you into the project root from within the container, you may ```exit``` out of that container to be returned to your local machine, where you can perform the demo.
-#### From your current location we can execute a remote replacement of a file using this command ```cp Gruntfile.js $(cd ..;cd ..;cd ..; pwd)/project/enketo/enketo-express-2/Gruntfile.js```, replacing the Gruntfile.js file from the zip file with our specific Gruntfile.js file.
+#### From your current location we can execute a remote replacement of a file using this command ```cp $(cd ..;cd ..;cd ..; pwd)/Gruntfile.js $(pwd)/Gruntfile.js```, replacing the Gruntfile.js file from the extraced zip file, with our specific Gruntfile.js file.
 #### From the location that you should still be in, the enketo-express-2 folder, download and apply the test reporter mochawesome using the following commands in THIS order.
 #### ```sudo apt-get install npm```
 #### ```sudo apt-get install nodejs-legacy```
@@ -34,7 +35,7 @@
 #### ```sudo mocha Gruntfile.js --reporter mochawesome```
 
 ## 5) 
-### {Important note: The testing summary will not display if your browser is open. It is therefore necessary that you close all of your browser windows before executing this last command.}
+### {Important Note: The testing summary will not display if your browser is open. It is therefore necessary that you close all of your browser windows before executing this last command.}
 #### After you have run all the above commmands and waited for everything to install you can execute the tests from the testAutomation directory, using the command
 #### ```sudo ./scripts/runAllTests.sh```
 
