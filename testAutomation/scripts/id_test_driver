@@ -5,15 +5,17 @@ GRUNT_COMMAND='test-and-build-kmp_id'
 
 TIME_EXECUTED="$(date +%s)"
 
-PATH_TO_ENKETO="/home/patrick/KMP/testAutomation/project/enketo/enketo-express-2"
+PATH_TO_KMP="$(cd ..; pwd)"
 
-PATH_TO_TESTER_FILE_DIR="/home/patrick/KMP/testAutomation/project/enketo/enketo-express-2/test/server/testCases"
+PATH_TO_ENKETO="$PATH_TO_KMP/testAutomation/project/enketo/enketo-express-2"
+
+PATH_TO_TESTER_FILE_DIR="$PATH_TO_KMP/testAutomation/project/enketo/enketo-express-2/test/server/testCases"
 
 PATH_TO_TESTER_FILE="$PATH_TO_TESTER_FILE_DIR/kmp_test_1.js"
 
 PATH_TO_ENKETO_DOCKER_COMPOSE="$PATH_TO_ENKETO/docker-compose.yml"
 
-PATH_TO_KMP_ID_TEST_RESULTS="/home/patrick/KMP/testAutomation/reports/id_test_results"
+PATH_TO_KMP_ID_TEST_RESULTS="$PATH_TO_KMP/testAutomation/reports/id_test_results"
 
 move_to_test_file_dir() {
   if [ ! -d "$PATH_TO_TESTER_FILE_DIR" ]

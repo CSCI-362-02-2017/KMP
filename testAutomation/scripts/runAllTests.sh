@@ -1,15 +1,17 @@
 #!/bin/sh
 
-set -x
+#set -x
 
 test_driver_filename='generate_tests.sh'
 
 # ------------------------- [START] get project path ------------------------- #
 # get full path to this dir and others
-scripts_dir="$(cd -P -- "$(dirname -- "$0")" 2>&1 > /dev/null && pwd -P)"
-test_cases_dir="$scripts_dir/../testCases"
-project_dir="$scripts_dir/../project"
-reports_dir="$scripts_dir/../reports"
+PATH_TO_KMP="$(cd ..; pwd)"
+echo $PATH_TO_KMP
+scripts_dir="$PATH_TO_KMP/testAutomation/scripts"
+test_cases_dir="$PATH_TO_KMP/testAutomation/testCases"
+project_dir="$PATH_TO_KMP/testAutomation/project"
+reports_dir="$PATH_TO_KMP/testAutomation/reports"
 # -------------------------- [END] get project path -------------------------- #
 
 # ---------------- [START] ensure dependencies are installed ----------------- #

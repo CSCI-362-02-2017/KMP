@@ -8,25 +8,27 @@ GRUNT_COMMAND='test-and-build-kmp_id'
 
 TIME_EXECUTED="$(date +%s)"
 
-PATH_TO_ENKETO="/home/patrick/KMP/testAutomation/project/enketo/enketo-express-2"
+PATH_TO_KMP="$(cd ..; pwd)"
 
-PATH_TO_TESTER_FILE_DIR="/home/patrick/KMP/testAutomation/project/enketo/enketo-express-2/test/server"
+PATH_TO_ENKETO="$PATH_TO_KMP/testAutomation/project/enketo/enketo-express-2"
+
+PATH_TO_TESTER_FILE_DIR="$PATH_TO_KMP/testAutomation/project/enketo/enketo-express-2/test/server"
 
 PATH_TO_ENKETO_DOCKER_COMPOSE="$PATH_TO_ENKETO/docker-compose.yml"
 
-PATH_TO_KMP_ID_TEST_RESULTS="/home/patrick/KMP/testAutomation/reports/id_test_results"
+PATH_TO_KMP_ID_TEST_RESULTS="$PATH_TO_KMP/testAutomation/reports/id_test_results"
 
-PATH_TO_KMP_INSTANCEID_TEST_RESULTS="/home/patrick/KMP/testAutomation/reports/instanceId_test_results"
+PATH_TO_KMP_INSTANCEID_TEST_RESULTS="$PATH_TO_KMP/testAutomation/reports/instanceId_test_results"
 
-PATH_TO_KMP_GET_REQUEST_TEST_RESULTS="/home/patrick/KMP/testAutomation/reports/get_request_test_results"
+PATH_TO_KMP_GET_REQUEST_TEST_RESULTS="$PATH_TO_KMP/testAutomation/reports/get_request_test_results"
 
-PATH_TO_KMP_SET_SURVEY_TEST_RESULTS="/home/patrick/KMP/testAutomation/reports/set_survey_test_results"
+PATH_TO_KMP_SET_SURVEY_TEST_RESULTS="$PATH_TO_KMP/testAutomation/reports/set_survey_test_results"
 
-PATH_TO_KMP_CACHE_INSTANCE_TEST_RESULTS="/home/patrick/KMP/testAutomation/reports/cache_instance_test_results"
+PATH_TO_KMP_CACHE_INSTANCE_TEST_RESULTS="$PATH_TO_KMP/testAutomation/reports/cache_instance_test_results"
 
-PATH_TO_KMP_OBTAIN_CACHED_INSTANCE_TEST_RESULTS="/home/patrick/KMP/testAutomation/reports/obtain_cached_instance_test_results"
+PATH_TO_KMP_OBTAIN_CACHED_INSTANCE_TEST_RESULTS="$PATH_TO_KMP/testAutomation/reports/obtain_cached_instance_test_results"
 
-PATH_TO_TEST_RESULTS="/home/patrick/KMP/testAutomation/project/enketo/enketo-express-2/mochawesome-report"
+PATH_TO_TEST_RESULTS="$PATH_TO_KMP/testAutomation/project/enketo/enketo-express-2/mochawesome-report"
 
 
 run_id_tests () {
@@ -55,14 +57,14 @@ run_obtain_cached_instance_tests () {
 }
 
 
-export path_to_test_file="/home/patrick/KMP/testAutomation/project/enketo/enketo-express-2/test/server/testCases/testCase001.spec.js"
-export path_to_test_dir="/home/patrick/KMP/testAutomation/project/enketo/enketo-express-2/test/server"
+export path_to_test_file="$PATH_TO_KMP/testAutomation/project/enketo/enketo-express-2/test/server/testCases/testCase001.spec.js"
+export path_to_test_dir="$PATH_TO_KMP/testAutomation/project/enketo/enketo-express-2/test/server"
 
 
 
-# path_to_kmp="$(/home/patrick/KMP/testAutomation)"
+# path_to_kmp="$PATH_TO_KMP"
 # counter=0
-# for testCase_file in $path_to_kmp/testCases/*
+# for testCase_file in $path_to_kmp/testAutomation/testCases/*
 # do
 # input_line=$(cat $testCase_file | grep "Inputs : ")
 
@@ -70,7 +72,7 @@ export path_to_test_dir="/home/patrick/KMP/testAutomation/project/enketo/enketo-
 
 
 
-# echo "1 $testCase_file" # "$path_to_kmp/testCasesinput_line_*"
+# echo "1 $testCase_file" # "$path_to_kmp/testAutomation/testCasesinput_line_*"
 #done
 
 
@@ -185,7 +187,7 @@ COUNTER=0
 for i in "${id_test_inputs[@]}"
 do
  get_new_id_path "$i"
- echo "$path_to_test_file"
+ #echo "$path_to_test_file"
  generate_id_test "$i"
  COUNTER=$((COUNTER+1))
 done
@@ -196,14 +198,14 @@ for row in $(echo "${ID_TEST_RESULTS}" | jq -r '.passes[] | @base64'); do
     _jq() {
      echo ${row} | base64 --decode | jq -r ${1}
     }
-   echo ${row} | base64 --decode >> /home/patrick/KMP/testCases/newJSfile.js
-   echo  $(_jq '.') >> /home/patrick/KMP/testCases/newJSfile.js
+   echo ${row} | base64 --decode >> $PATH_TO_KMP/testAutomation/testCases/newJSfile.js
+   echo  $(_jq '.') >> $PATH_TO_KMP/testAutomation/testCases/newJSfile.js
 done
 
 for i in "${instanceId_test_inputs[@]}"
 do
  get_new_instanceId_path "$i"
- echo "$path_to_test_file"
+ #echo "$path_to_test_file"
  generate_instanceId_test "$i"
  COUNTER=$((COUNTER+1))
 done
@@ -214,7 +216,7 @@ echo "$INSTANCEID_TEST_RESULTS" > "$PATH_TO_KMP_INSTANCEID_TEST_RESULTS/test-and
 for i in "${set_survey_test_inputs[@]}"
 do
  get_new_survey_test_path "$i"
- echo "$path_to_test_file"
+ #echo "$path_to_test_file"
  generate_set_survey_test "$i"
  COUNTER=$((COUNTER+1))
 done
@@ -224,7 +226,7 @@ echo "$SET_SURVEY_TEST_RESULTS" > "$PATH_TO_KMP_SET_SURVEY_TEST_RESULTS/test-and
 for i in "${cache_instance_test_inputs[@]}"
 do
  get_new_cache_instance_path "$i"
- echo "$path_to_test_file"
+ #echo "$path_to_test_file"
  generate_cache_instance_test "$i"
  COUNTER=$((COUNTER+1))
 done
@@ -234,7 +236,7 @@ echo "$CACHE_INSTANCE_TEST_RESULTS" > "$PATH_TO_KMP_CACHE_INSTANCE_TEST_RESULTS/
 for i in "${obtain_cached_instance_test_inputs[@]}"
 do
  get_new_obtain_cached_instance_path "$i"
- echo "$path_to_test_file"
+ #echo "$path_to_test_file"
  generate_obtain_cached_instance_test "$i"
  COUNTER=$((COUNTER+1))
 done
@@ -242,12 +244,8 @@ OBTAIN_CACHED_INSTANCE_TEST_RESULTS="$(run_obtain_cached_instance_tests)"
 echo "$OBTAIN_CACHED_INSTANCE_TEST_RESULTS" > "$PATH_TO_KMP_OBTAIN_CACHED_INSTANCE_TEST_RESULTS/test-and-build-kmp_obtain_cached_instance-$TIME_EXECUTED.html"
 
 open_results() {
-cd '../project/enketo/enketo-express-2/mochawesome-report'
-xdg-open output-obtain_cached_instance.html &
-xdg-open output-set_survey.html &
-xdg-open output-cache_instance.html &
-xdg-open output-id.html &
-xdg-open output-instanceId.html &
+cd "$PATH_TO_ENKETO/mochawesome-report"
+firefox output-id.html output-instanceId.html output-set_survey.html output-cache_instance.html output-obtain_cached_instance.html
 
 }
 
