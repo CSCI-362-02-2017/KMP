@@ -19,7 +19,7 @@
 #### There is an enketo-express.zip file. Unzip that by first confirming you have unzip ```sudo apt-get install unzip```, then once you are certain you do, type ```unzip enketo-express.zip``` into the console. If it asks you to replace files, enter ```A```.
 
 ## 3)
-#### Copy the Docker_run_script from the enketo directory into the newly created enketo-express-2 directory using the command ```cp Docker_run_script $(pwd)/enketo-express-2/```.
+#### Copy the Docker_run_script from the enketo directory into the newly created enketo-express-2 directory using the command ```cp Docker_run_script $(pwd)/enketo-express-2```.
 #### Move into the project root, using the command ```cd ./enketo-express-2``` and run the Docker_run_script that you just copied using the command ```sudo ./Docker_run_script```
 #### When the script is done running you can open up another terminal and run ```sudo docker ps``` to confirm that the containers are up and running. From the same terminal you may type ```sudo docker logs -f enketo``` to confirm that there is an npm install happening inside the enketo container, give this time to finish as well as it may take some time depending on your system. 
 ##### [Also Note: if you ever get stuck in a command during this process, use ```CTRL + C``` to exit any currently running commands. Beware as using this can cancel or terminate installing scripts.]
