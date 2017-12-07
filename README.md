@@ -25,8 +25,8 @@
 
 ## 4)
 #### When the script is done running it will bash you into the project root from within the container, you may ```exit``` out of that container to be returned to your local machine, where you can perform the demo.
-#### move to the testAutomation directory and copy/replace the Gruntfile.js located in the enketo-express-2 folder with the Gruntfile.js that is in the testAutomation directory using the command ```cp Gruntfile.js $(pwd)/project/enketo/enketo-express-2/Gruntfile.js```
-#### From the project root download and apply the test reporter mochawesome using the following commands in THIS order.
+#### From your current location we can execute a remote replacement of a file using this command ```cp Gruntfile.js $(cd ..;cd ..;cd ..; pwd)/project/enketo/enketo-express-2/Gruntfile.js```, replacing the Gruntfile.js file from the zip file with our specific Gruntfile.js file.
+#### From the location that you should still be in, the enketo-express-2 folder, download and apply the test reporter mochawesome using the following commands in THIS order.
 #### ```sudo apt-get install npm```
 #### ```sudo apt-get install nodejs-legacy```
 #### ``` sudo npm install --global mocha```
