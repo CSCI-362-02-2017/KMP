@@ -22,7 +22,7 @@
 
 ## 4)
 ### When the script is done running it will bash you into the project root from within the container, you may ```exit``` out of that container to be returned to your local machine, where you can perform the demo.
-### move to the testAutomation directory and copy/replace the Gruntfile.js located in the PROJECT ROOT with the Gruntfile.js that is in the testAutomation directory (``` cp Gruntfile.js ~(path-to-projcet)/enketo-express-2/Gruntfile.js ```)pt-get install nodejs-legacys
+### move to the testAutomation directory and copy/replace the Gruntfile.js located in the PROJECT ROOT with the Gruntfile.js that is in the testAutomation directory (``` cp Gruntfile.js $(pwd)/project/enketo/enketo-express-2/Gruntfile.js ```)pt-get install nodejs-legacys
 ### From the project root download and apply the test reporter mochawesome.```sudo apt-get install npm``` followed by ```sudo apt-get install nodejs-legacy``` then ``` sudo npm install --global mocha``` then ```sudo npm install --save-dev mochawesome``` and then ```sudo mocha Gruntfile.js --reporter mochawesome```
 
 ## 5) 
